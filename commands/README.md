@@ -6,6 +6,8 @@ You can change it changing that number in the commands
 
 Example:
 
-Replay this: [ovs@fer ~]# wget http://openvswitch.org/releases/openvswitch-2.11.0.tar.gz
+If you want to install the version 2.10.1 then:
+
+Replace this: [ovs@fer ~]# wget http://openvswitch.org/releases/openvswitch-2.11.0.tar.gz
 
 By this: [ovs@fer ~]# wget http://openvswitch.org/releases/openvswitch-2.10.1.tar.gz
