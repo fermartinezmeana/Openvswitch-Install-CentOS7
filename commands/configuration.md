@@ -12,11 +12,10 @@ ovs-vsctl add-br br-in
 <br />
 <br />
 <br />
-<br />
 
 ### **Adding the network interface to external bridge (Needed for internet connection):**
 
-### **Use command `ip link show` to know your network interface**
+#Use command `ip link show` to know your network interface
 
 ovs-vsctl add-port bridge_ext_name interface_name
 
