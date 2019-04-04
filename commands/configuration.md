@@ -1,17 +1,19 @@
-## Creating external and internal bridge:
+**Creating external and internal bridge:**
 
 ovs-vsctl add-br bridge_ext_name
+
 ovs-vsctl add-br bridge_int_name
 
-## Example
+_Example_
 
 ovs-vsctl add-br br-ex
 ovs-vsctl add-br br-in
 
 
 
-## Adding the network interface to external bridge (Needed for internet connection):
-## Use command ip link show to know your network interface
+**Adding the network interface to external bridge (Needed for internet connection):
+
+Use command `ip link show` to know your network interface**
 
 ovs-vsctl add-port bridge_ext_name interface_name
 
