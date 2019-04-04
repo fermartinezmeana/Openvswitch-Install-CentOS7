@@ -18,7 +18,7 @@ ovs-vsctl add-br br-in
 
 #Use command `ip link show` to know your network interface
 
-ovs-vsctl add-port ```bridge_ext_name interface_name```
+ovs-vsctl add-port `bridge_ext_name` `interface_name`
 
 <br />
 
