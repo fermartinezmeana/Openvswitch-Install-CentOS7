@@ -19,11 +19,14 @@ ovs-vsctl add-br br-in
 
 ovs-vsctl add-port bridge_ext_name interface_name
 
-## Example:
+<br />
+
+**Example:**
 
 ovs-vsctl add-port br-ex eht0
-
-
+<br />
+<br />
+<br />
 
 ## Configuring external bridge and network interface:
 ## You need to know your ip address, the netmask and the gateway. Use commands "ip a" and "ip r"
