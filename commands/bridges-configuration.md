@@ -2,7 +2,6 @@
 ovs-vsctl add-br `bridge_ext_name`
 <br />
 ovs-vsctl add-br `bridge_int_name`
-
 <br />
 
 **Example**
@@ -12,20 +11,17 @@ ovs-vsctl add-br br-ex
 ovs-vsctl add-br br-in
 <br />
 <br />
-<br />
 
 ### **Add the network interface to the external bridge (Needed for internet connection):**
 
 #Use command `ip link show` to know your network interface
 
 ovs-vsctl add-port `bridge_ext_name` `interface_name`
-
 <br />
 
 **Example:**
 
 ovs-vsctl add-port br-ex eth0
-<br />
 <br />
 <br />
 
@@ -37,7 +33,6 @@ ip addr flush dev `interface_name`
 ip addr add `IP_XX` dev `bridge_ext_name`
 <br />
 ip link set dev `bridge_ext_name` up
-
 <br />
 
 **Example:**
@@ -47,7 +42,6 @@ ip addr flush dev eth0
 ip addr add 192.168.1.5 dev br-ex
 <br />
 ip link set dev br-ex up
-<br />
 <br />
 <br />
 
