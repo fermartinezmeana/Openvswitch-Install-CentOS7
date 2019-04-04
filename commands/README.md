@@ -8,4 +8,4 @@ Example:
 
 Replay this: [ovs@fer ~]# wget http://openvswitch.org/releases/openvswitch-2.11.0.tar.gz
 
-With this: [ovs@fer ~]# wget http://openvswitch.org/releases/openvswitch-2.10.1.tar.gz
+By this: [ovs@fer ~]# wget http://openvswitch.org/releases/openvswitch-2.10.1.tar.gz
