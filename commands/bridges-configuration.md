@@ -1,7 +1,7 @@
 ### **Creating external and internal bridge:**
-[root@fer ~]ovs-vsctl add-br `bridge_ext_name`
+[root@fer ~] ovs-vsctl add-br `bridge_ext_name`
 <br />
-[root@fer ~]ovs-vsctl add-br `bridge_int_name`
+[root@fer ~] ovs-vsctl add-br `bridge_int_name`
 <br />
 
 **Example**
