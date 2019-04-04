@@ -6,9 +6,9 @@
 
 **Example**
 <br />
-ovs-vsctl add-br br-ex
+[root@fer ~] ovs-vsctl add-br br-ex
 <br />
-ovs-vsctl add-br br-in
+[root@fer ~] ovs-vsctl add-br br-in
 <br />
 <br />
 
@@ -16,47 +16,47 @@ ovs-vsctl add-br br-in
 
 #Use command `ip link show` to know your network interface
 <br />
-ovs-vsctl add-port `bridge_ext_name` `interface_name`
+[root@fer ~] ovs-vsctl add-port `bridge_ext_name` `interface_name`
 <br />
 
 **Example:**
 <br />
-ovs-vsctl add-port br-ex eth0
+[root@fer ~] ovs-vsctl add-port br-ex eth0
 <br />
 <br />
 
 ### Configuration of external bridge and network interface:
 #You need know your ip address, netmask and gateway. Use commands `ip a` and `ip r` to know them
 <br />
-ip addr flush dev `interface_name`
+[root@fer ~] ip addr flush dev `interface_name`
 <br />
-ip addr add `IP_XX` dev `bridge_ext_name`
+[root@fer ~] ip addr add `IP_XX` dev `bridge_ext_name`
 <br />
-ip link set dev `bridge_ext_name` up
+[root@fer ~] ip link set dev `bridge_ext_name` up
 <br />
 
 **Example:**
 <br />
-ip addr flush dev eth0
+[root@fer ~] ip addr flush dev eth0
 <br />
-ip addr add 192.168.1.5 dev br-ex
+[root@fer ~] ip addr add 192.168.1.5 dev br-ex
 <br />
-ip link set dev br-ex up
+[root@fer ~] ip link set dev br-ex up
 <br />
 <br />
 
 ### Configuring internal bridge
 
-ip addr add `IP_YY` dev `bridge_int_name`
+[root@fer ~] ip addr add `IP_YY` dev `bridge_int_name`
 <br />
-ip link set dev `bridge_int_name` up
+[root@fer ~] ip link set dev `bridge_int_name` up
 <br />
 
 **Example:**
 <br />
-ip addr add 10.0.0.100 dev br-in
+[root@fer ~] ip addr add 10.0.0.100 dev br-in
 <br />
-ip link set dev br-in up
+[root@fer ~] ip link set dev br-in up
 <br />
 <br />
 
@@ -83,29 +83,30 @@ GATEWAY=XX.XX.XX.XX
 
 **Example:**
 <br />
-vi /etc/sysconfig/network-scripts/ifcfg-br-ex
+[root@fer ~] vi /etc/sysconfig/network-scripts/ifcfg-br-ex
 <br />
-  TYPE=OVSBridge
+TYPE=OVSBridge
 <br />
-  BOOTPROTO=static
+BOOTPROTO=static
 <br />
-  DEVICE=br-ex
+DEVICE=br-ex
 <br />
-  DEVICETYPE=ovs
+DEVICETYPE=ovs
 <br />
-  ONBOOT=yes
+ONBOOT=yes
 <br />
-  IPADDR=192.168.1.5
+IPADDR=192.168.1.5
 <br />
-  NETMASK=255.255.255.0
+NETMASK=255.255.255.0
 <br />
-  GATEWAY=192.168.1.1
+GATEWAY=192.168.1.1
 <br />
 <br />
 
 ### Peristent configuration for network interface:
 
-Clear the file /etc/sysconfig/network-scripts/ifcfg-`interface_name` and add
+#Clear the file /etc/sysconfig/network-scripts/ifcfg-`interface_name` and add
+[root@fer ~] 
 <br />
 DEVICE=`interface_name`
 <br />
@@ -120,7 +121,7 @@ ONBOOT=yes
 
 **Example:**
 <br />
-vi /etc/sysconfig/network-scripts/ifcfg-eth0
+[root@fer ~] vi /etc/sysconfig/network-scripts/ifcfg-eth0
 <br />
 DEVICE=eth0
 <br />
@@ -136,7 +137,7 @@ ONBOOT=yes
 
 ### Persistent configuration for interior bridge:
 
-vi /etc/sysconfig/network-scripts/ifcfg-bridge_int_name
+[root@fer ~] vi /etc/sysconfig/network-scripts/ifcfg-bridge_int_name
 
 DEVICE=bridge_int_name
 <br />
