@@ -1,8 +1,12 @@
 ### **Creating external and internal bridge:**
 ovs-vsctl add-br bridge_ext_name
+
 ovs-vsctl add-br bridge_int_name
+
 <br />
-*Example*
+
+**Example**
+
 ovs-vsctl add-br br-ex
 ovs-vsctl add-br br-in
 <br />
