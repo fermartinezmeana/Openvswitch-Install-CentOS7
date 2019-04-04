@@ -14,7 +14,7 @@
 <br />
 [ovs@fer ~]# cp openvswitch-2.11.0.tar.gz ~/rpmbuild/SOURCES/
 <br />
-[rovs@fer ~]# tar xfz openvswitch-2.11.0.tar.gz
+[ovs@fer ~]# tar xfz openvswitch-2.11.0.tar.gz
 <br />
 [ovs@fer ~]# rpmbuild -bb --nocheck openvswitch-2.11.0/rhel/openvswitch-fedora.spec
 <br />
