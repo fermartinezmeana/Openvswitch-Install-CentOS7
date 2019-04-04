@@ -30,7 +30,7 @@ ovs-vsctl add-port br-ex eth0
 <br />
 
 ### Configuration of external bridge and network interface:
-#You need to know your ip address, netmask and gateway. Use command `ip a` to know your ip address. Use command `ip r` to know your     #netmask and gateway. Gateway is the number X.X.X.X found in the first line: default via X.X.X.X Netmask is found in the second line, it #looks like X.X.X.X/Z where Z is the netmask
+#You need to know your ip address, netmask and gateway. Use command `ip a` to know your ip address. Use command     `ip r` to know your  #netmask and gateway. Gateway is the number X.X.X.X found in the first line: default via X.X.X.X Netmask is found in the second line, it #looks like X.X.X.X/Z where Z is the netmask
 
 #/16 means 255.255.0.0  /24 means 255.255.255.0  /21 means 255.255.248.0  ...
 
