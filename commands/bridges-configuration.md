@@ -117,7 +117,7 @@ TYPE=OVSPort
 <br />
 DEVICETYPE=ovs
 <br />
-OVS_BRIDGE=bridge_ext_name
+OVS_BRIDGE=`bridge_ext_name`
 <br />
 ONBOOT=yes
 <br />
@@ -143,7 +143,7 @@ Clear the file /etc/sysconfig/network-scripts/ifcfg-`bridge_int_name` and add:
 
 [root@fer ~]# vi /etc/sysconfig/network-scripts/ifcfg-`bridge_int_name`
 <br />
-DEVICE=bridge_int_name
+DEVICE=`bridge_int_name`
 <br />
 DEVICETYPE=ovs
 <br />
@@ -151,9 +151,9 @@ TYPE=OVSBridge
 <br />
 BOOTPROTO=static
 <br />
-IPADDR=XX.XX.XX.XX
+IPADDR=YY.YY.YY.YY
 <br />
-NETMASK=XXX.XXX.XXX.X
+NETMASK=YYY.YYY.YYY.Y
 <br />
 ONBOOT=yes
 <br />
