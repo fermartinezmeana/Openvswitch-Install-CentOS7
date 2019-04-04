@@ -1,6 +1,7 @@
 ### Installation using CLI
-In this folder there are all the necessary commands to install openvswitch. The version installed is 2.11.0.
-<br />
+In this folder there are all the necessary commands to install openvswitch. 
+The version installed is 2.11.0.
+
 You can change it replacing that number in the corresponding commands
 <br />
 
