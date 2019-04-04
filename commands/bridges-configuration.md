@@ -8,7 +8,7 @@ ovs-vsctl add-br `bridge_int_name`
 **Example**
 
 ovs-vsctl add-br br-ex
-
+<br />
 ovs-vsctl add-br br-in
 <br />
 <br />
@@ -33,9 +33,9 @@ ovs-vsctl add-port br-ex eth0
 #You need know your ip address, netmask and gateway. Use commands `ip a` and `ip r` to know them
 
 ip addr flush dev `interface_name`
-
+<br />
 ip addr add `IP_XX` dev `bridge_ext_name`
-
+<br />
 ip link set dev `bridge_ext_name` up
 
 <br />
@@ -43,9 +43,9 @@ ip link set dev `bridge_ext_name` up
 **Example:**
 
 ip addr flush dev eth0
-
+<br />
 ip addr add 192.168.1.5 dev br-ex
-
+<br />
 ip link set dev br-ex up
 <br />
 <br />
@@ -54,7 +54,7 @@ ip link set dev br-ex up
 ### Configuring internal bridge
 
 ip addr add `IP_YY` dev `bridge_int_name`
-
+<br />
 ip link set dev `bridge_int_name` up
 
 <br />
@@ -62,7 +62,7 @@ ip link set dev `bridge_int_name` up
 **Example:**
 
 ip addr add 10.0.0.100 dev br-in
-
+<br />
 ip link set dev br-in up
 <br />
 <br />
@@ -73,19 +73,19 @@ ip link set dev br-in up
 vi /etc/sysconfig/network-scripts/ifcfg-bridge_ext_name
 
 TYPE=OVSBridge
-
+<br />
 BOOTPROTO=static
-
+<br />
 DEVICE=bridge_ext_name
-
+<br />
 DEVICETYPE=ovs
-
+<br />
 ONBOOT=yes
-
+<br />
 IPADDR=XX.XX.XX.XX
-
+<br />
 NETMASK=XXX.XXX.XXX.X
-
+<br />
 GATEWAY=XX.XX.XX.XX
 
 <br />
@@ -95,19 +95,19 @@ GATEWAY=XX.XX.XX.XX
 vi /etc/sysconfig/network-scripts/ifcfg-br-ex
 
 TYPE=OVSBridge
-
+<br />
 BOOTPROTO=static
-
+<br />
 DEVICE=br-ex
-
+<br />
 DEVICETYPE=ovs
-
+<br />
 ONBOOT=yes
-
+<br />
 IPADDR=192.168.1.5
-
+<br />
 NETMASK=255.255.255.0
-
+<br />
 GATEWAY=192.168.1.1
 <br />
 <br />
@@ -116,15 +116,15 @@ GATEWAY=192.168.1.1
 ### Peristent configuration for network interface:
 
 vi /etc/sysconfig/network-scripts/ifcfg-interface_name
-
+<br />
 DEVICE=interface_name
-
+<br />
 TYPE=OVSPort
-
+<br />
 DEVICETYPE=ovs
-
+<br />
 OVS_BRIDGE=bridge_ext_name
-
+<br />
 ONBOOT=yes
 
 <br />
@@ -134,13 +134,13 @@ ONBOOT=yes
 vi /etc/sysconfig/network-scripts/ifcfg-eth0
 
 DEVICE=eth0
-
+<br />
 TYPE=OVSPort
-
+<br />
 DEVICETYPE=ovs
-
+<br />
 OVS_BRIDGE=br-ex
-
+<br />
 ONBOOT=yes
 <br />
 <br />
@@ -151,17 +151,17 @@ ONBOOT=yes
 vi /etc/sysconfig/network-scripts/ifcfg-bridge_int_name
 
 DEVICE=bridge_int_name
-
+<br />
 DEVICETYPE=ovs
-
+<br />
 TYPE=OVSBridge
-
+<br />
 BOOTPROTO=static
-
+<br />
 IPADDR=XX.XX.XX.XX
-
+<br />
 NETMASK=XXX.XXX.XXX.X
-
+<br />
 ONBOOT=yes
 
 <br />
@@ -169,17 +169,17 @@ ONBOOT=yes
 **Example**
 
 DEVICE=br-in
-
+<br />
 DEVICETYPE=ovs
-
+<br />
 TYPE=OVSBridge
-
+<br />
 BOOTPROTO=static
-
+<br />
 IPADDR=10.0.0.100
-
+<br />
 NETMASK=255.255.255.0
-
+<br />
 ONBOOT=yes
 <br />
 <br />
