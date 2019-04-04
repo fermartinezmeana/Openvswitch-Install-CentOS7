@@ -15,7 +15,7 @@ ovs-vsctl add-br br-in
 ### **Add the network interface to the external bridge (Needed for internet connection):**
 
 #Use command `ip link show` to know your network interface
-
+<br />
 ovs-vsctl add-port `bridge_ext_name` `interface_name`
 <br />
 
@@ -27,7 +27,7 @@ ovs-vsctl add-port br-ex eth0
 
 ### Configuration of external bridge and network interface:
 #You need know your ip address, netmask and gateway. Use commands `ip a` and `ip r` to know them
-
+<br />
 ip addr flush dev `interface_name`
 <br />
 ip addr add `IP_XX` dev `bridge_ext_name`
@@ -50,7 +50,6 @@ ip link set dev br-ex up
 ip addr add `IP_YY` dev `bridge_int_name`
 <br />
 ip link set dev `bridge_int_name` up
-
 <br />
 
 **Example:**
@@ -58,7 +57,6 @@ ip link set dev `bridge_int_name` up
 ip addr add 10.0.0.100 dev br-in
 <br />
 ip link set dev br-in up
-<br />
 <br />
 <br />
 
@@ -81,7 +79,6 @@ IPADDR=XX.XX.XX.XX
 NETMASK=XXX.XXX.XXX.X
 <br />
 GATEWAY=XX.XX.XX.XX
-
 <br />
 
 **Example:**
@@ -105,7 +102,6 @@ NETMASK=255.255.255.0
 GATEWAY=192.168.1.1
 <br />
 <br />
-<br />
 
 ### Peristent configuration for network interface:
 
@@ -120,7 +116,6 @@ DEVICETYPE=ovs
 OVS_BRIDGE=bridge_ext_name
 <br />
 ONBOOT=yes
-
 <br />
 
 **Example:**
@@ -136,7 +131,6 @@ DEVICETYPE=ovs
 OVS_BRIDGE=br-ex
 <br />
 ONBOOT=yes
-<br />
 <br />
 <br />
 
@@ -157,7 +151,6 @@ IPADDR=XX.XX.XX.XX
 NETMASK=XXX.XXX.XXX.X
 <br />
 ONBOOT=yes
-
 <br />
 
 **Example**
@@ -175,7 +168,6 @@ IPADDR=10.0.0.100
 NETMASK=255.255.255.0
 <br />
 ONBOOT=yes
-<br />
 <br />
 <br />
 
