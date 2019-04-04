@@ -23,17 +23,18 @@ ovs-vsctl add-port bridge_ext_name interface_name
 
 **Example:**
 
-ovs-vsctl add-port br-ex eht0
+ovs-vsctl add-port br-ex eth0
 <br />
 <br />
 <br />
 
-## Configuring external bridge and network interface:
-## You need to know your ip address, the netmask and the gateway. Use commands "ip a" and "ip r"
-## When using command "ip r" you have a line that looks like: default via XXXXX
-## The number XXXXX is the Gateway
-## The next line looks like XXXXX/ZZ
-## ZZ is the netmask      /16 means 255.255.0.0  /24 means 255.255.255.0  /21 means 255.255.248.0  ...
+### Configuration of external bridge and network interface:
+#You need to know your ip address, netmask and gateway. 
+#Use command `ip a` to know your ip address
+#Use command `ip r` to know your netmask and gateway
+#Gateway is the number X.X.X.X found in the first line: default via X.X.X.X
+#Netmask is found in the second line, it looks like X.X.X.X/Z where Z is the netmask
+#/16 means 255.255.0.0  /24 means 255.255.255.0  /21 means 255.255.248.0  ...
 
 ip addr flush dev interface_name
 ip addr add IP_XX dev bridge_ext_name
