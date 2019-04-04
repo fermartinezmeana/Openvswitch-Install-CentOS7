@@ -1,7 +1,7 @@
 ### **Creating external and internal bridge:**
-ovs-vsctl add-br bridge_ext_name
+ovs-vsctl add-br `bridge_ext_name`
 
-ovs-vsctl add-br bridge_int_name
+ovs-vsctl add-br `bridge_int_name`
 
 <br />
 
@@ -30,9 +30,7 @@ ovs-vsctl add-port br-ex eth0
 <br />
 
 ### Configuration of external bridge and network interface:
-#You need know your ip address, netmask and gateway. Use command `ip a` to know your ip address. Use command `ip r` #to know your  netmask and gateway. Gateway is the number X.X.X.X found in the first line: default via X.X.X.X Netmask is found in the second line, it #looks like X.X.X.X/Z where Z is the netmask
-
-#/16 means 255.255.0.0  /24 means 255.255.255.0  /21 means 255.255.248.0  ...
+#You need know your ip address, netmask and gateway. Use commands `ip a` and `ip r` to know them
 
 ip addr flush dev `interface_name`
 
@@ -66,8 +64,9 @@ ip link set dev `bridge_int_name` up
 ip addr add 10.0.0.100 dev br-in
 
 ip link set dev br-in up
-
-
+<br />
+<br />
+<br />
 
 ## Persistent configuration for exterior bridge:
 
