@@ -42,11 +42,11 @@ ovs-vsctl add-port br-ex eth0
 
 #/16 means 255.255.0.0  /24 means 255.255.255.0  /21 means 255.255.248.0  ...
 
-ip addr flush dev interface_name
+ip addr flush dev `interface_name`
 
-ip addr add IP_XX dev bridge_ext_name
+ip addr add `IP_XX` dev `bridge_ext_name`
 
-ip link set dev bridge_ext_name up
+ip link set dev `bridge_ext_name` up
 
 <br />
 
@@ -61,14 +61,18 @@ ip link set dev br-ex up
 <br />
 <br />
 
-## Configuring internal bridge
+### Configuring internal bridge
 
-ip addr add IP_YY dev bridge_int_name
-ip link set dev bridge_int_name up
+ip addr add `IP_YY` dev `bridge_int_name`
 
-## Example:
+ip link set dev `bridge_int_name` up
+
+<br />
+
+**Example:**
 
 ip addr add 10.0.0.100 dev br-in
+
 ip link set dev br-in up
 
 
