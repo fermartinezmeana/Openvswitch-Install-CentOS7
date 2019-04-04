@@ -4,6 +4,8 @@ The version installed is 2.11.0
 
 You can change it changing that number in the commands
 
+<br />
+
 Example:
 
 If you want to install the version 2.10.1 then:
