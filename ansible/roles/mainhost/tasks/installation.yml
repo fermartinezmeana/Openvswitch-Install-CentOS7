@@ -1,0 +1,66 @@
+---
+- name: Install dependencies
+  yum:
+    name: ['gcc','gcc-c++','autoconf','automake','libtool','openssl-devel','python-devel','desktop-file-utils','groff','graphviz','checkpolicy','selinux-policy-devel','python-sphinx','python-twisted-core','python-zope-interface','python-six','libcap-ng-devel','unbound','unbound-devel','rpm-build','wget']
+    state: present
+
+- name: Create user ovs
+  user:
+    name: ovs
+    state: present
+
+- name: Create file /home/ovs/.ansible/tmp
+  file:
+    path: /home/ovs/.ansible/tmp
+    state: directory
+    mode: 0777
+
+- name: Create file ~/rpmbuild/SOURCES
+  file:
+    path: /home/ovs/rpmbuild/SOURCES
+    state: directory
+    mode: 0775
+  become: yes
+  become_user: ovs
+
+- name: Download openvswitch
+  get_url:
+    url: http://openvswitch.org/releases/openvswitch-{{ ovs_version }}.tar.gz
+    dest: /home/ovs/
+    mode: 0664
+  become: yes
+  become_user: ovs
+
+- name: Copy openvswitch file to /home/ovs/rpmbuild/SOURCES/
+  copy:
+    remote_src: yes
+    src: /home/ovs/openvswitch-{{ ovs_version }}.tar.gz
+    dest: /home/ovs/rpmbuild/SOURCES/
+    mode: 0664
+  become: yes
+  become_user: ovs
+
+- name: Uncompress openvswitch-{{ ovs_version }}.tar.gz
+  unarchive:
+    remote_src: yes
+    src: /home/ovs/openvswitch-{{ ovs_version }}.tar.gz
+    dest: /home/ovs/
+    mode: 0755
+  become: yes
+  become_user: ovs
+
+- name: Create .rpm file to install openvswitch
+  command: rpmbuild -bb --nocheck /home/ovs/openvswitch-{{ ovs_version }}/rhel/openvswitch-fedora.spec 
+  become: yes
+  become_user: ovs
+
+- name: Install openvswitch
+  yum:
+    name: /home/ovs/rpmbuild/RPMS/x86_64/openvswitch-{{ ovs_version }}-1.el7.x86_64.rpm
+    state: present
+
+- name: Start and enable service openvswitch
+  service:
+    name: openvswitch
+    state: started
+    enabled: yes
