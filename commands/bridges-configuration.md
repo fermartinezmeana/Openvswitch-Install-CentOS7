@@ -62,13 +62,13 @@ ip link set dev br-in up
 
 ### Persistent configuration for exterior bridge:
 
-vi /etc/sysconfig/network-scripts/ifcfg-bridge_ext_name
-
+Clear the file /etc/sysconfig/network-scripts/ifcfg-`bridge_ext_name` and add:
+<br />
 TYPE=OVSBridge
 <br />
 BOOTPROTO=static
 <br />
-DEVICE=bridge_ext_name
+DEVICE=`bridge_ext_name`
 <br />
 DEVICETYPE=ovs
 <br />
@@ -84,7 +84,7 @@ GATEWAY=XX.XX.XX.XX
 **Example:**
 <br />
 vi /etc/sysconfig/network-scripts/ifcfg-br-ex
-
+<br />
 TYPE=OVSBridge
 <br />
 BOOTPROTO=static
@@ -105,9 +105,9 @@ GATEWAY=192.168.1.1
 
 ### Peristent configuration for network interface:
 
-vi /etc/sysconfig/network-scripts/ifcfg-interface_name
+Clear the file /etc/sysconfig/network-scripts/ifcfg-`interface_name` and add
 <br />
-DEVICE=interface_name
+DEVICE=`interface_name`
 <br />
 TYPE=OVSPort
 <br />
@@ -121,7 +121,7 @@ ONBOOT=yes
 **Example:**
 <br />
 vi /etc/sysconfig/network-scripts/ifcfg-eth0
-
+<br />
 DEVICE=eth0
 <br />
 TYPE=OVSPort
