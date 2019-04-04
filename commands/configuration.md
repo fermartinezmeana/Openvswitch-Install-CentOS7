@@ -4,6 +4,8 @@ ovs-vsctl add-br bridge_ext_name
 
 ovs-vsctl add-br bridge_int_name
 <br />
+<br />
+<br />
 _Example_
 
 ovs-vsctl add-br br-ex
