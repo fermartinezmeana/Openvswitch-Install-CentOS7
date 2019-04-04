@@ -4,6 +4,7 @@ The version installed is 2.11.0.
 
 You can change it replacing that number in the corresponding commands
 <br />
+<br />
 
 **Example:**
 <br />
