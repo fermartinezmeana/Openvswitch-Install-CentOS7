@@ -1,5 +1,5 @@
-# OVS-Installation
-In this repository I will show how to install and configure Openvswitch in CentOS7. I presneted two ways to install openvswitch:
+# Openvswitch installation
+In this repository I will show how to install and configure Openvswitch in CentOS7. I presented two ways to install openvswitch:
 - With commands, manual
 - With ansible, automated
 
