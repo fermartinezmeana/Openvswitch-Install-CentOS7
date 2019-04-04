@@ -85,21 +85,21 @@ GATEWAY=XX.XX.XX.XX
 <br />
 vi /etc/sysconfig/network-scripts/ifcfg-br-ex
 <br />
-TYPE=OVSBridge
+  TYPE=OVSBridge
 <br />
-BOOTPROTO=static
+  BOOTPROTO=static
 <br />
-DEVICE=br-ex
+  DEVICE=br-ex
 <br />
-DEVICETYPE=ovs
+  DEVICETYPE=ovs
 <br />
-ONBOOT=yes
+  ONBOOT=yes
 <br />
-IPADDR=192.168.1.5
+  IPADDR=192.168.1.5
 <br />
-NETMASK=255.255.255.0
+  NETMASK=255.255.255.0
 <br />
-GATEWAY=192.168.1.1
+  GATEWAY=192.168.1.1
 <br />
 <br />
 
