@@ -5,7 +5,7 @@ ovs-vsctl add-br `bridge_int_name`
 <br />
 
 **Example**
-
+<br />
 ovs-vsctl add-br br-ex
 <br />
 ovs-vsctl add-br br-in
@@ -20,7 +20,7 @@ ovs-vsctl add-port `bridge_ext_name` `interface_name`
 <br />
 
 **Example:**
-
+<br />
 ovs-vsctl add-port br-ex eth0
 <br />
 <br />
@@ -36,7 +36,7 @@ ip link set dev `bridge_ext_name` up
 <br />
 
 **Example:**
-
+<br />
 ip addr flush dev eth0
 <br />
 ip addr add 192.168.1.5 dev br-ex
@@ -53,7 +53,7 @@ ip link set dev `bridge_int_name` up
 <br />
 
 **Example:**
-
+<br />
 ip addr add 10.0.0.100 dev br-in
 <br />
 ip link set dev br-in up
@@ -82,7 +82,7 @@ GATEWAY=XX.XX.XX.XX
 <br />
 
 **Example:**
-
+<br />
 vi /etc/sysconfig/network-scripts/ifcfg-br-ex
 
 TYPE=OVSBridge
@@ -119,7 +119,7 @@ ONBOOT=yes
 <br />
 
 **Example:**
-
+<br />
 vi /etc/sysconfig/network-scripts/ifcfg-eth0
 
 DEVICE=eth0
@@ -154,7 +154,7 @@ ONBOOT=yes
 <br />
 
 **Example**
-
+<br />
 DEVICE=br-in
 <br />
 DEVICETYPE=ovs
