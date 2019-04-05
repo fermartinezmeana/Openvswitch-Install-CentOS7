@@ -1,5 +1,5 @@
 ### Installation using Ansible
-In this section there are all the necessary commands for an automated installation and configuration of openvswitch with Ansible. 
+In this section there are all the necessary files for an automated installation and configuration of openvswitch using Ansible. 
 
 ### Installation options
 
