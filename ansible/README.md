@@ -8,9 +8,9 @@ In this section there are all the necessary files for an automated installation 
 You can install openvswitch in localhost or in a remote host. By default the installation is in localhost, if you want install openvswitch in a remote host you need to:
 - Modify the file site.yml and replace the line `hosts: local` by `hosts: remotehost`.
 
-- lallaa
+- Setting up public key authentication from localhost to the remote host. (https://www.ssh.com/ssh/copy-id)
 
-- Modify the file hosts commenting [local] and localhost lines, uncommenting remotehost and its IP lines and replacing the IP with yours.
+- Modify the file hosts commenting the local section, uncommenting the remotehost section and replacing the IP.
 
 Example hosts file:
 <br />
