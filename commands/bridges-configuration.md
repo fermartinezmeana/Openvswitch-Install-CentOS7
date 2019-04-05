@@ -26,7 +26,7 @@ Use command `ip link show` to know your network interface
 <br />
 
 ### Configuration of external bridge and network interface:
-You need know your ip address, netmask and gateway. Use commands `ip a` and `ip r` to know them
+You need find out your ip address, netmask and gateway. Use commands `ip a` and `ip r` to know them
 
 [root@fer ~]# ip addr flush dev `interface_name`
 <br />
