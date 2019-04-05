@@ -4,7 +4,9 @@ In this section there are all the necessary files for an automated installation 
 ### 1. Pre-requisites
 You only need have Ansible installed in your computer you are going to launch the installation. You can install it using the command `yum install ansible` or you can find more information [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html?extIdCarryOver=true&sc_cid=701f2000001OH7YAAW#latest-release-via-dnf-or-yum)
 
-### 2. Installation options
+### 2. Installation
+To install Openvswitch only need to run the command `ansible-playbook -i hosts site.yml`
+### 3. Installation options
 
 #### - Hosts
 You can install openvswitch in localhost or in a remote host. By default the installation is in localhost, if you want install openvswitch in a remote host you need to:
