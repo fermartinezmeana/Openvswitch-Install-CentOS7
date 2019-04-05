@@ -2,6 +2,5 @@
 - name: Install openvswitch
   hosts: mainhost
   become: yes
- # remote_user: root
   roles:
-    - mainhost
+    - openvswitch

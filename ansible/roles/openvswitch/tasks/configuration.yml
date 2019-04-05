@@ -1,0 +1,31 @@
+---
+- name: Backup file ifcfg-{{ interface }}
+  copy:
+    remote_src: yes
+    src: /etc/sysconfig/network-scripts/ifcfg-{{ interface }}
+    dest: /etc/sysconfig/network-scripts/bck.ifcfg-{{ interface }}
+    mode: 0644
+
+- name: Delete file ifcfg-{{ interface }}
+  file:
+    path: /etc/sysconfig/network-scripts/ifcfg-{{ interface }}
+    state: absent
+
+- name: Create and edit file ifcfg-{{ interface }}
+  template:
+    src: interface.cnf.j2
+    dest: /etc/sysconfig/network-scripts/ifcfg-{{ interface }}
+
+- name: Create and edit file ifcfg-{{ bridge_in }}
+  template:
+    src: br-in.cnf.j2
+    dest: /etc/sysconfig/network-scripts/ifcfg-{{ bridge_in }}
+
+- name: Create and edit file ifcfg-{{ bridge_ex }}
+  template:
+    src: br-ex.cnf.j2
+    dest: /etc/sysconfig/network-scripts/ifcfg-{{ bridge_ex }}
+  notify:
+  - Restart network
+
+

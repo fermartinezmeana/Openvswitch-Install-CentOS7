@@ -1,10 +1,10 @@
-bridge_ext: "br-ex"
-br_ex_address: 10.6.19.192
+bridge_ex: "br-ex"
+br_ex_address: 10.6.19.201
 br_ex_netmask: 255.255.248.0
 br_ex_gateway: 10.6.16.2
 
-bridge_int: "br-in"
-br_in_address: 192.168.1.203
+bridge_in: "br-in"
+br_in_address: 192.168.1.201
 br_in_netmask: 255.255.255.0
 
 ovs_version: 2.11.0
