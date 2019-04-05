@@ -16,4 +16,4 @@ Replace this:
 <br />
 By this: 
 <br />
-[ovs@fer ~]# wget http://openvswitch.org/releases/openvswitch-2.10.1.tar.gz
+[ovs@fer ~]# wget http://openvswitch.org/releases/openvswitch-2.10.1.tar.gz 
