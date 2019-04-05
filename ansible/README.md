@@ -10,7 +10,7 @@ To install Openvswitch you only need run the command `ansible-playbook -i hosts 
 ## 3. Installation options
 
 ### - Network configuration and Openvswitch version:
-You can change the network configuration and the Openvswitch version modifying the file `all` located in the folder `group_vars`. To set the `bridge_exterior` you need find out your ip address, netmask and gateway. Use commands `ip a` and `ip r` to know them
+You **need change the network configuration** and the Openvswitch version modifying the file `all` located in the folder `group_vars`. To set the `bridge_exterior` you need find out your ip address, netmask and gateway. Use commands `ip a` and `ip r` to know them
 
 ### - Change installation host
 You can install openvswitch in localhost or in a remote host. By default the installation is in localhost, if you want install openvswitch in a remote host you need to:
