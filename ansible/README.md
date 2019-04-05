@@ -13,10 +13,13 @@ You can install openvswitch in localhost or in a remote host. By default the ins
 - Modify the file hosts commenting [local] and localhost lines, uncommenting remotehost and its IP lines and replacing the IP with yours.
 
 Example hosts file:
+<br />
 #[local]
+<br />
 #localhost ansible_connection=local
-
+<br />
 [remotehost]
+<br />
 192.168.1.5
 
 
