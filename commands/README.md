@@ -14,11 +14,13 @@ Replace this:
 [ovs@fer ~]# wget http://openvswitch.org/releases/openvswitch-2.11.0.tar.gz
 <br />
 [ovs@fer ~]# cp openvswitch-2.11.0.tar.gz ~/rpmbuild/SOURCES/ 
+
 <br />
 By this: 
 <br />
 [ovs@fer ~]# wget http://openvswitch.org/releases/openvswitch-2.10.1.tar.gz 
 <br />
 [ovs@fer ~]# cp openvswitch-2.10.1.tar.gz ~/rpmbuild/SOURCES/ 
+
 <br />
 and so on ...
