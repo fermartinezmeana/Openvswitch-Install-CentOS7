@@ -76,11 +76,11 @@ DEVICETYPE=ovs
 <br />
 ONBOOT=yes
 <br />
-IPADDR=XX.XX.XX.XX
+IPADDR=`XX.XX.XX.XX`
 <br />
-NETMASK=XXX.XXX.XXX.X
+NETMASK=`XXX.XXX.XXX.X`
 <br />
-GATEWAY=XX.XX.XX.XX
+GATEWAY=`XX.XX.XX.XX`
 <br />
 
 **Example:**
@@ -151,9 +151,9 @@ TYPE=OVSBridge
 <br />
 BOOTPROTO=static
 <br />
-IPADDR=YY.YY.YY.YY
+IPADDR=`YY.YY.YY.YY`
 <br />
-NETMASK=YYY.YYY.YYY.Y
+NETMASK=`YYY.YYY.YYY.Y`
 <br />
 ONBOOT=yes
 <br />
