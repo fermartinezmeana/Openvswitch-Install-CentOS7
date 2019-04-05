@@ -6,8 +6,7 @@ You can change it replacing that number in the corresponding commands
 <br />
 <br />
 
-**Example:**
-<br />
+#### Example:
 If you want to install the version 2.10.1 then:
 <br />
 Replace this: 
