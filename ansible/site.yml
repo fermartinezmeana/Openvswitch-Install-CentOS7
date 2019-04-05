@@ -1,6 +1,6 @@
 ---
 - name: Install openvswitch
-  hosts: mainhost
+  hosts: all
   become: yes
   roles:
     - openvswitch
