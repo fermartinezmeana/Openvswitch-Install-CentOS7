@@ -1,5 +1,5 @@
 ## Installation using Ansible
-In this section there are all the necessary files for an automated installation and configuration of openvswitch using Ansible. The last Ansible version used to install Openvswitch is 2.7.9
+In this section there are all the necessary files for an automated installation and configuration of openvswitch using Ansible. The last Ansible version used in this document is 2.7.9
 
 ### 1- Pre-requisiteshttps://releases.ansible.com/ansible/rpm/release/epel-7-x86_64/
 You only need have Ansible installed in your computer. You can install it with `yum install ansible` or you can find more information in https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html?extIdCarryOver=true&sc_cid=701f2000001OH7YAAW#latest-release-via-dnf-or-yum
@@ -15,7 +15,7 @@ You can install openvswitch in localhost or in a remote host. By default the ins
 
 - Modify the file hosts commenting the local section, uncommenting the remotehost section and replacing the IP.
 
-#### Example hosts file:
+##### Example hosts file:
 #[local]
 <br />
 #localhost ansible_connection=local
