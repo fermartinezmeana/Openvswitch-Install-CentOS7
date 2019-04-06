@@ -1,12 +1,12 @@
-### Install dependencies:
+### Install dependencies
 [root@fer ~]#  yum install gcc gcc-c++ autoconf automake libtool openssl-devel python-devel desktop-file-utils groff graphviz checkpolicy selinux-policy-devel python-sphinx python-twisted-core python-zope-interface python-six libcap-ng-devel unbound unbound-devel wget rpm-build -y
 
-### Create and login user ovs:
+### Create and login user ovs
 [root@fer ~]# useradd ovs
 <br />
 [root@fer ~]# su - ovs
 
-### Donwload Openvswitch:
+### Donwload Openvswitch
 [ovs@fer ~]# wget http://openvswitch.org/releases/openvswitch-2.11.0.tar.gz
 
 ### Build rpm package:
@@ -24,10 +24,37 @@
 <br />
 [root@fer ~]# yum localinstall /home/ovs/rpmbuild/RPMS/x86_64/openvswitch-2.11.0-1.el7.x86_64.rpm -y
 
-### Start and enable service:
+### Start and enable service
 [root@fer ~]# systemctl start openvswitch.service
 <br />
 [root@fer ~]# systemctl enable openvswitch.service
 
-### Checking installation:
+### Checking installation
 [root@fer ~]# ovs-vsctl show
+
+### All commands together
+yum install gcc gcc-c++ autoconf automake libtool openssl-devel python-devel desktop-file-utils groff graphviz checkpolicy selinux-policy-devel python-sphinx python-twisted-core python-zope-interface python-six libcap-ng-devel unbound unbound-devel wget rpm-build -y
+<br />
+useradd ovs
+<br />
+su - ovs
+<br />
+wget http://openvswitch.org/releases/openvswitch-2.11.0.tar.gz
+<br />
+mkdir -p ~/rpmbuild/SOURCES
+<br />
+cp openvswitch-2.11.0.tar.gz ~/rpmbuild/SOURCES/
+<br />
+tar xfz openvswitch-2.11.0.tar.gz
+<br />
+rpmbuild -bb --nocheck openvswitch-2.11.0/rhel/openvswitch-fedora.spec
+<br />
+exit
+<br />
+yum localinstall /home/ovs/rpmbuild/RPMS/x86_64/openvswitch-2.11.0-1.el7.x86_64.rpm -y
+<br />
+systemctl start openvswitch.service
+<br />
+systemctl enable openvswitch.service
+<br />
+ovs-vsctl show
