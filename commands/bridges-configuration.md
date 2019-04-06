@@ -1,4 +1,4 @@
-### **Creating external and internal bridge:**
+### Creating external and internal bridge
 [root@fer ~]# ovs-vsctl add-br `bridge_ext_name`
 <br />
 [root@fer ~]# ovs-vsctl add-br `bridge_int_name`
@@ -12,7 +12,7 @@
 <br />
 <br />
 
-### **Add the network interface to the external bridge (Needed for internet connection):**
+### Add the network interface to the external bridge (Needed for internet connection)
 
 Use command `ip link show` to know your network interface
 
@@ -25,7 +25,7 @@ Use command `ip link show` to know your network interface
 <br />
 <br />
 
-### Configuration of external bridge and network interface:
+### Configuration of external bridge and network interface
 You need find out your ip address, netmask and gateway. Use commands `ip a` and `ip r` to know them
 
 [root@fer ~]# ip addr flush dev `interface_name`
@@ -60,7 +60,7 @@ You need find out your ip address, netmask and gateway. Use commands `ip a` and 
 <br />
 <br />
 
-### Persistent configuration for exterior bridge:
+### Persistent configuration for exterior bridge
 
 Clear the file /etc/sysconfig/network-scripts/ifcfg-`bridge_ext_name` and add:
 
@@ -105,7 +105,7 @@ GATEWAY=192.168.1.1
 <br />
 <br />
 
-### Peristent configuration for network interface:
+### Peristent configuration for network interface
 
 Clear the file /etc/sysconfig/network-scripts/ifcfg-`interface_name` and add
 
@@ -138,7 +138,7 @@ ONBOOT=yes
 <br />
 <br />
 
-### Persistent configuration for interior bridge:
+### Persistent configuration for interior bridge
 Clear the file /etc/sysconfig/network-scripts/ifcfg-`bridge_int_name` and add:
 
 [root@fer ~]# vi /etc/sysconfig/network-scripts/ifcfg-`bridge_int_name`
@@ -176,6 +176,6 @@ ONBOOT=yes
 <br />
 <br />
 
-### Restart the network:
+### Restart the network
 
 [root@fer ~]# systemctl restart network
