@@ -58,9 +58,9 @@
   yum:
     name: /home/ovs/rpmbuild/RPMS/x86_64/openvswitch-{{ ovs_version }}-1.el7.x86_64.rpm
     state: present
-
-- name: Start and enable service openvswitch
-  service:
-    name: openvswitch
-    state: started
-    enabled: yes
+  notify: Openvswitch service
+#- name: Start and enable service openvswitch
+#  service:
+#    name: openvswitch
+#    state: started
+#    enabled: yes

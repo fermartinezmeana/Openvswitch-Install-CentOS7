@@ -1,0 +1,13 @@
+---
+- name: Restart network
+  service:
+    name: network
+    state: restarted
+
+- name: Openvswitch service
+  systemd:
+    name: openvswitch
+    state: started
+    enabled: yes
+    masked: no
+    daemon_reload: no
