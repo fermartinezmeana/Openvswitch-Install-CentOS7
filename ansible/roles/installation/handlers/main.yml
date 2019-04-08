@@ -1,9 +1,4 @@
 ---
-- name: Restart network
-  service:
-    name: network
-    state: restarted
-
 - name: Openvswitch service
   systemd:
     name: openvswitch
