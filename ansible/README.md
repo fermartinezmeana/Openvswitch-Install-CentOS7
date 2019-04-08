@@ -2,10 +2,10 @@
 In this section there are all the necessary files for an automated installation and configuration of openvswitch using Ansible. The last Ansible version used in this document is 2.7.9
 
 ## 1. Pre-requisites
-You only need have Ansible installed in your computer you are going to launch the installation. You can install it using the command `yum install ansible` or you can find more information [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html?extIdCarryOver=true&sc_cid=701f2000001OH7YAAW#latest-release-via-dnf-or-yum)
+You only need have Ansible installed in the computer you are going to launch the installation. You can install it using the command `yum install ansible` or you can find more information [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html?extIdCarryOver=true&sc_cid=701f2000001OH7YAAW#latest-release-via-dnf-or-yum)
 
 ## 2. Installation
-To install Openvswitch you only need run the command `ansible-playbook -i hosts site.yml`.
+To install Openvswitch you only need run the command `ansible-playbook -i hosts site.yml` inside the ansible directory.
 
 ## 3. Installation options
 
