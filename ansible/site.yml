@@ -4,4 +4,9 @@
   become: yes
   roles:
     - installation
+
+- name: Configure network
+  hosts: all
+  become: yes
+  roles:
     - configuration
