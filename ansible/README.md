@@ -1,8 +1,8 @@
 # Installation using Ansible
-In this section there are all the necessary files for an automated installation and configuration of openvswitch using Ansible. The last Ansible version used in this document is 2.7.9
+In this section there are all the necessary files for an automated installation and configuration of openvswitch using Ansible. 
 
 ## 1. Pre-requisites
-You only need have Ansible installed in the computer you are going to launch the installation. You can install it using the command `yum install ansible` or you can find more information [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html?extIdCarryOver=true&sc_cid=701f2000001OH7YAAW#latest-release-via-dnf-or-yum)
+You only need have Ansible installed in the computer you are going to launch the installation. You can install it using the command `yum install ansible` or you can find more information [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html?extIdCarryOver=true&sc_cid=701f2000001OH7YAAW#latest-release-via-dnf-or-yum). The last Ansible version used in this document is 2.7.9
 
 ### - Network configuration and Openvswitch version:
 You **need change the network configuration**. To set the `bridge_exterior` you need find out your ip address, netmask and gateway. Use commands `ip a` and `ip r` to know them. To do this, modify the file `all` located in the folder `group_vars`. In this file you can also modify the Openvswitch version.
